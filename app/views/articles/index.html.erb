@@ -58,7 +58,7 @@
     <% end %>
     <% if @articles.length == 0 %>
       <div id="post">
-        <p>There are currently no articles posted! Be the first to post!</p>
+        <p>There are currently no articles posted! Be the first to post! Click <%= link_to "here", sign_up_path %> to sign up or <%= link_to "here", log_in_path %> to log in and get started!</p>
       </div>
     <% end %>
   </div>
