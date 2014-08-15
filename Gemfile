@@ -48,3 +48,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'pg', '~> 0.17.1'
+
+gem 'rails_12factor'
