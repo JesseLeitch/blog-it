@@ -1,0 +1,26 @@
+<div id="wrapper">
+  <div class="centerstage" id="indexnewpost">
+    <h1>Edit Blog Post</h1>
+<%= form_for @article do |f| %>
+  <% if @article.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @article.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  	<p>
+  		<%= f.label :title %><br>
+  		<%= f.text_field :title %>
+  	</p>
+	<p>
+		<%= f.label :body %><br>
+		<%= f.text_area :body %>
+	</p>
+	<p class="button"><%= submit_tag %></p>
+<% end %>
+</div>
+</div>

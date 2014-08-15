@@ -1,0 +1,76 @@
+<div id="wrapper">
+  <div class="centerstage" id="indexnewpost">
+    <div id="userpostprofile">
+    <%= image_tag @user.image_url(:thumb) %>
+    <%= link_to @user.email, user_path(@user), id:"useremail" %>
+    <% if current_user.id == @user.id %>
+      <%= form_for @user, url: {action: "update"} do |i| %>
+        <%= i.label "Update your Avatar" %>
+        <%= i.file_field :image %><br>
+        <%= submit_tag %>
+      <% end %>
+    <% end %>
+  </div>
+  <div id="postcontent">
+    <% if signed_in? %>
+      <h1>New Blog Post</h1>
+      <%= form_for @article do |f| %>
+        <% if @article.errors.any? %>
+          <div class="error_messages">
+            <h2>Form is invalid</h2>
+            <ul>
+              <% for message in @article.errors.full_messages %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+          <p>
+            <%= f.label :title %><br>
+            <%= f.text_field :title %>
+          </p>
+        <p>
+          <%= f.label :body %><br>
+          <%= f.text_area :body %>
+        </p>
+        <%= submit_tag "Create post", class: "submitbutton" %>
+      <% end %>
+    <% else %>
+      <p>Click <%= link_to "here", sign_up_path %> to sign up or <%= link_to "here", log_in_path %> to log in and create a post!</p>
+    <% end %>
+  </div>
+      <div id="clear">
+    </div>
+  </div>
+  </div>
+  <div class="centerstage" id="indexlist">
+    <h1>All Posts By <%= @user.email %></h1>
+    <%= paginate @articles, :window => 1 %>
+    <% @articles.each do |article| %>
+    <div id="post">
+      <a href="<%= user_path(article.user) %>">
+        <div id="userpostprofile">
+          <%= image_tag article.user.image_url(:thumb) %>
+          <%= link_to article.user.email, user_path(article.user), id:"useremail" %>
+        </div>
+      </a>
+      <div id="postcontent" class="whitebg">
+        <div id="postheading">
+          <%= link_to article.title, article_path(article) %>
+          <%= article.created_at %>
+        </div>
+        <div id="postbody">
+          <p><%= truncate(article.body, length: 250, omission: '... (continued)') %></p>
+        </div>
+        <div id="postoptions">
+        <% if current_user == article.user %>
+          <%= link_to "[Edit]", edit_article_path(article) %>
+          <%= link_to "[Delete]", article_path(article), method: :delete, data: {confirm: 'This can not be reversed. Are you sure?'} %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+    <div id="clear"></div>
+    <% end %>
+  </div>
+</div>

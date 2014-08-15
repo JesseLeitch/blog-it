@@ -1,0 +1,205 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*
+	Blue : 44998E;
+	Mint: 8FC798;
+	Light Grey: D8D4D2
+	Med Grey: 969187;
+	Dark Grey : 414143;
+
+*/
+
+
+body{
+	margin:0px;
+	padding:0px;
+	background-color: #414143;
+}
+p{
+	margin:0px;
+	padding:0px;
+}
+h1{
+	text-transform:uppercase;
+	color:white;
+}
+
+#topbar-wrapper{
+	margin:0px;
+	height:20px;
+	background-color:#303030;
+	font-size:16px;
+	color:#fff;
+	text-transform:uppercase;
+	position:relative;
+}
+
+#topbar-content{
+	display:inline;
+	position:absolute;
+	top:0px;
+	right:10px;
+}
+
+#userstatus{
+	margin:0px;
+	padding:0px 10px 0px 0px;
+	display:inline;
+}
+
+#topbar-content a{
+	color:#fff;
+}
+
+#topbar-content a:visited{
+	color:#fff;
+}
+
+#wrapper{
+	margin:0 auto;
+	width:800px;
+	padding:10px;
+}
+
+.centerstage{
+	margin:0 auto;
+}
+
+#indexnewpost{
+	width:800px;
+	background-color: #8FC798;
+	padding:8px 8px 25px;
+	border-radius:8px;
+	border:2px solid #44998E;
+}
+
+#indexnewpost label{
+	color:#303030;
+	text-transform: uppercase;
+}
+
+#article_title{
+	width:300px;
+	color:#303030;
+	border-radius:8px;
+}
+
+#article_body{
+	width:480px;
+	min-height:300px;
+	resize:none;
+	border-radius: 8px;
+}
+
+.submitbutton{
+	
+}
+
+.pagination{
+	margin:0 auto 10px;
+	width:150px;
+	color:#8FC798;
+}
+
+.pagination a{
+	color:#8FC798;
+}
+
+#post{
+	width:800px;
+	position:relative;
+	min-height:150px;
+	overflow:hidden;
+	margin:0 auto 20px;
+	background-color: #8FC798;
+	padding:8px 8px 25px;
+	border-radius:8px;
+	border:2px solid #44998E;
+}
+
+#userpostprofile{
+	width:300px;
+	float:left;
+}
+
+#useremail{
+	display:block;
+	color:#303030;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#postheading{
+	height:50px;
+	font-size:22px;
+	text-transform: uppercase;
+	color:#303030;
+}
+
+#postheading a{
+	text-decoration:none;
+	color:#303030;
+}
+
+#postbody{
+	right:0px;
+	font-size:16px;
+}
+
+#postcontent{
+	float:left;
+	padding:10px;
+	border-radius:8px;
+	width:480px;
+}
+
+.whitebg{
+	background-color: #fff;
+}
+
+#postoptions{
+	position:absolute;
+	bottom:3px;
+	right:10px;
+	width:125px;
+	color:#fff;
+}
+
+#postoptions a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color:#303030;
+}
+
+#indexlist{
+	width:800px;
+}
+
+#clear{
+	content:".";
+	clear:both;
+	height:1px;
+	display:block;
+	visibility: hidden;
+}
+
+#toplink{
+	color:#44998E;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-size:16px;
+}
