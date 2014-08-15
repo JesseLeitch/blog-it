@@ -49,3 +49,4 @@ gem 'carrierwave'
 #Used for Image Modification - requires ImageMagick
 gem 'mini_magick'
 
+gem 'pg', '~> 0.17.1'
