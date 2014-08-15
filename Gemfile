@@ -47,6 +47,10 @@ gem 'carrierwave'
 #Used for Image Modification - requires ImageMagick
 gem 'mini_magick'
 
-gem 'pg', '~> 0.17.1'
+gem 'pg', '~> 0.17.1', 		group: :production
+
+group :development, :test do
+	gem 'sqlite3'
+end
 
 gem 'rails_12factor'
