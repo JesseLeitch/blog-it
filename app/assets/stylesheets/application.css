@@ -204,7 +204,7 @@ h1{
 	font-size:16px;
 }
 
-#flashnotice{
+#flashnotice, #flashsuccess{
 	text-align:center;
 	text-transform:uppercase;
 	color:#44998E;
