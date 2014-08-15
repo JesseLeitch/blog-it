@@ -45,6 +45,11 @@
       </div>
     </div>
     <% end %>
+    <% if @comments.length == 0 %>
+      <div id="post">
+        <p>There are currently no comments posted! Be the first to comment on this post!</p>
+      </div>
+    <% end %>
   <%= paginate @comments %>
 </div>
 <div class="centerstage" id="indexnewpost">
