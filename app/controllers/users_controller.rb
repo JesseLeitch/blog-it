@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(params.require(:user).permit(:image))
-      redirect_to @user
+      redirect_to @user, :notice => "Updated avatar!"
     else
       logger.debug @user.errors.inspect
     end
