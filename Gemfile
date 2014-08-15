@@ -41,8 +41,11 @@ gem 'spring',        group: :development
 #Used for pagination.
 gem 'kaminari'
 
-#Used for Image Uploading
+#Used for Image Uploadin
 gem 'carrierwave'
+
+#Used for S3 Storage
+gem 'fog', '~> 1.3.1'
 
 #Used for Image Modification - requires ImageMagick
 gem 'mini_magick'
